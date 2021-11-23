@@ -1,0 +1,57 @@
+@import 'colors';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooths    ;
+
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+    color: $black;
+}
+
+.main {
+    &__wrapper {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+    }
+
+    &__container {
+        width: 100%;
+        max-width: 120rem;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin: 0 auto;
+    }
+
+    &__logo {
+        display: flex;
+        align-items: flex-end;
+        &--state {
+            margin-right: 1.2rem;
+        }
+
+        &--ebac {
+            
+        }
+    }
+
+    &__city {
+        font-size: 1.8rem;
+        line-height: 2.1rem;
+    }
+
+    &__span {
+        font-size: 1.2rem;
+    }
+}
