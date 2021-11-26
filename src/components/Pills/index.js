@@ -1,5 +1,5 @@
 import React from "react";
-import "./style.scss";
+import "./pills.scss";
 import PropTypes from "prop-types";
 
 const Pills = ({ local, onClick, selected }) => {
