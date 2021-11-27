@@ -1,17 +1,26 @@
-import React, { useState } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import "./style.scss";
 import emphasisImage from "../../images/emphasis-image.png";
 import Pills from "../../components/Pills";
+import { LocationContext } from "../../contexts/LocationContext";
+import { useParams } from "react-router";
 
 const PLACES = ["Praça", "Parque", "Igreja", "Hotel", "Farmácia", "Loja"];
 
-const Home = props => {
+const Home = () => {
+  const { city, state } = useParams();
   const [selectedPill, setSelectedPill] = useState("");
+  const { setCity, setState } = useContext(LocationContext);
+
+  useEffect(() => {
+    setCity(city);
+    setState(state);
+  }, [city, state]);
 
   return (
     <main id="main-content" className="home__container">
       <div className="home__col">
-        <h1 className="home__title">{props.city} para Todos</h1>
+        <h1 className="home__title">{city} para Todos</h1>
         <div className="home__image home__image--emphasis hide-desktop">
           <img src={emphasisImage} alt="Imagem cadeirante" />
         </div>

@@ -5,15 +5,21 @@ import {
 } from "react-router-dom";
 
 import Home from "../pages/Home";
+import { LocationContext } from "../contexts/LocationContext";
+import { useState } from "react";
+import Header from "../components/Header";
 
 const Routes = (props) => {
+  const [city, setCity] = useState("");
+  const [state, setState] = useState("");
+
   return (
-    <Router>
+    <LocationContext.Provider value={{city, setCity, state, setState}}>
+      <Header />
       <Switich>
         <Route path=":state/:city" element={<Home />} />
-        <Route path="sp/mandaguari" element={<Home state={props.state} city={props.city} />} />
       </Switich>
-    </Router>
+    </LocationContext.Provider>
   );
 };
 
