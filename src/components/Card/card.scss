@@ -1,7 +1,7 @@
-.card {
+.card {  
   &__container {
     width: 100%;
-    max-width: 222px;   
+    max-width: 222px;    
   }
 
   &__image {
@@ -19,7 +19,7 @@
       font-weight: 700;
       font-size: 2.4rem;
       line-height: 2.8rem;      
-      color: var(--black);
+      color: var(--black);      
     }
 
     p {
