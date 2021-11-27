@@ -12,6 +12,9 @@ const Home = props => {
     <main id="main-content" className="home__container">
       <div className="home__col">
         <h1 className="home__title">{props.city} para Todos</h1>
+        <div className="home__image home__image--emphasis hide-desktop">
+          <img src={emphasisImage} alt="Imagem cadeirante" />
+        </div>
         <p className="home__text">
           Nossa missão é facilitar o encontro entre lugares inclusivos e pessoas
           que buscam alternativas culturais para sair de casa, com a mobilidade
@@ -34,7 +37,7 @@ const Home = props => {
         </div>
       </div>
       <div className="home__col">
-        <div className="home__image home__image--emphasis">
+        <div className="home__image home__image--emphasis hide-mobile">
           <img src={emphasisImage} alt="Imagem cadeirante" />
         </div>
       </div>
