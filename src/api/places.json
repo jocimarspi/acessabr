@@ -3,8 +3,10 @@
     {
       "id": 1,
       "name": "Museu da Língua Portuguesa",
-      "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. ",
+      "description": "Valorizar a diversidade da língua portuguesa, celebrá-la como elemento fundamental e fundador da cultura e aproximá-la dos falantes do idioma em todo o mundo.",
+      "category": "Museu",
       "image": "/places/museu-da-lingua-portuguesa.png",
+      "link": "https://www.museudalinguaportuguesa.org.br",
       "location": {
         "lat": "01234",
         "long": "01234"
@@ -25,8 +27,10 @@
     {
       "id": 2,
       "name": "Mercado Municipal",
-      "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. ",
+      "description": "Visita obrigatória para turistas de todo o Brasil e de outros países, o Mercado Municipal Paulistano é um dos mais tradicionais pontos gourmet da cidade.",
       "image": "/places/marcado-municipal-sp 1.png",
+      "link": "https://www.mercadomunicipalsp.com/",
+      "category": "Restaurante",
       "location": {
         "lat": "01234",
         "long": "01234"
@@ -46,9 +50,11 @@
     },
     {
       "id": 3,
-      "name": "Museu de Artes",
-      "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. ",
+      "name": "Museu de Artes de São Paulo",
+      "description": "O Museu de Arte de São Paulo é um museu privado sem fins lucrativos, fundado em 1947 pelo empresário e mecenas Assis Chateaubriand (1892-1968), tornando-se o primeiro museu moderno no país.",
       "image": "/places/masp.png",
+      "link": "https://masp.org.br",
+      "category": "Museu",
       "location": {
         "lat": "01234",
         "long": "01234"
@@ -69,8 +75,10 @@
     {
       "id": 4,
       "name": "Parque do Ingá",
-      "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. ",
+      "description": "O Parque do Ingá é uma reserva florestal de 47,3 hectares urbanizada em 1970. No local encontra-se a primeira Maria Fumaça de Maringá, uma locomotiva 608 que inaugurou a Estação Ferroviária de 1954.",
       "image": "/places/parque-do-inga.jpg",
+      "link": "http://www2.maringa.pr.gov.br/turismo/?cod=atrativos-turisticos/4",
+      "category": "Parque",
       "location": {
         "lat": "01234",
         "long": "01234"
@@ -91,21 +99,23 @@
     {
       "id": 5,
       "name": "Patota",
-      "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. ",
+      "description": "Uma das pizzarias mais tradicionais de Mandaguari. Possui opções de rodizios, porções, lanches.",
       "image": "/places/patota.jpg",
+      "link": "https://www.facebook.com/Patota0037/?ref=page_internal",
+      "category": "Restaurante",
       "location": {
         "lat": "01234",
         "long": "01234"
       },
       "facilities": [
-        { "item": 1, "status": true },
-        { "item": 2, "status": true },
-        { "item": 3, "status": true },
-        { "item": 4, "status": true },
-        { "item": 5, "status": true },
+        { "item": 1, "status": false },
+        { "item": 2, "status": false },
+        { "item": 3, "status": false },
+        { "item": 4, "status": false },
+        { "item": 5, "status": false },
         { "item": 6, "status": true },
-        { "item": 7, "status": true },
-        { "item": 8, "status": true },
+        { "item": 7, "status": false },
+        { "item": 8, "status": false },
         { "item": 9, "status": true },
         { "item": 10, "status": true }
       ]

@@ -45,7 +45,7 @@ const isChecked = (facility, place) => {
 const Card = ({ place }) => {
   const imagePath = require('../../images' + place.image);
   return (
-    <div className="    ">
+    <div className="card__container">
       <div className="card__image">
         <img src={imagePath.default} alt={place.name} title={place.name} />
       </div>
@@ -71,7 +71,7 @@ const Card = ({ place }) => {
         </ul>
         <p>{place.description}</p>
 
-        <Button>Como chegar?</Button>
+        <a href={place.link} target="_blank" className="button card__button">Como chegar?</a>
       </div>
     </div>
   );

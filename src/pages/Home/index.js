@@ -4,13 +4,26 @@ import emphasisImage from "../../images/emphasis-image.png";
 import Pills from "../../components/Pills";
 import { LocationContext } from "../../contexts/LocationContext";
 import { useParams } from "react-router";
+import { FilterContext } from "../../contexts/FilterContext";
 
-const PLACES = ["Praça", "Parque", "Igreja", "Hotel", "Farmácia", "Loja"];
+const PLACES = ["Museu", "Restaurante", "Praça", "Parque", "Igreja", "Hotel", "Farmácia", "Loja"];
 
 const Home = () => {
-  const { city, state } = useParams();
-  const [selectedPill, setSelectedPill] = useState("");
+  const { city, state } = useParams();   
   const { setCity, setState } = useContext(LocationContext);
+  const { filteredPlace, setFilteredPlace } = useContext(FilterContext);
+
+  const handleFilterPlace = (place) => {
+    console.log("Current Place: " + place);
+    console.log("Filtered place: " + filteredPlace);
+
+    if (place === filteredPlace) {
+      setFilteredPlace('');
+      return;
+    }    
+
+    setFilteredPlace(place);    
+  }
 
   useEffect(() => {
     setCity(city);
@@ -34,12 +47,12 @@ const Home = () => {
           deficiência em diversos pontos da cidade.
         </p>
         <div className="home__pills">
-          {PLACES.map((item) => {
+          {PLACES.map((place) => {
             return (
               <Pills
-                local={item}
-                selected={selectedPill === item}
-                onClick={() => setSelectedPill(item)}
+                local={place}
+                selected={filteredPlace === place}
+                onClick={() => handleFilterPlace(place)}
               />
             );
           })}

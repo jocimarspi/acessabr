@@ -10,12 +10,16 @@ import { FilterContext } from "../../contexts/FilterContext";
 SwiperCore.use([Pagination]);
 
 const Slider = () => {
-  const { filteredPlaces, setFilteredPlaces} = useContext(FilterContext);
+  const { filteredPlace, setFilteredPlace} = useContext(FilterContext);
   const [places, setPlaces] = useState([]);
 
   useEffect(() => {
     const fetchPlaces = async () => {
-      const result = await api.get(`/places?category=${filteredPlaces}`);
+      console.log('filteredPlaces: ' + filteredPlace);      
+
+      const result = await api.get(`/places?category_like=${filteredPlace}`);
+
+      console.log(result.data);      
 
       if (result.status === 200) {
         setPlaces(result.data);
@@ -23,7 +27,7 @@ const Slider = () => {
     };
 
     fetchPlaces();
-  }, [filteredPlaces]);
+  }, [filteredPlace]);
 
   return (
     <Swiper
